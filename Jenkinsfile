@@ -2,12 +2,12 @@ pipeline {
     agent any
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-creds')
-        DOCKER_IMAGE = "your-dockerhub-username/microservice-app"
+        DOCKER_IMAGE = "asm789/microservice-app"
     }
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/your-username/microservice-app.git'
+                git branch: 'main', url: 'https://github.com/asm789/microservice-app.git'
             }
         }
         stage('Build Docker Image') {
